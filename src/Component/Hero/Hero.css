@@ -1,0 +1,29 @@
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    padding-top: 5rem;
+    word-wrap: break-word;
+
+}
+.hero-section-box-1{
+width: 50%;
+}
+.hero-section-box-1 h1{
+    font-size: 45px;
+}
+.hero-section-box-1 h2{
+    padding-top: 10px;
+
+}
+.hero-section-box-1 p{
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    padding-top: 1rem;
+
+}
+.hero-section-box-2{
+    width: 50%;
+
+}

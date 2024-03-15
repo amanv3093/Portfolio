@@ -1,0 +1,84 @@
+.Home-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+   
+}
+.box-1{
+  
+}
+.light{
+    position: relative;
+    z-index: 4;
+    font-size: 55px;
+    cursor: pointer;
+    transition: transform 1s ease;
+    
+}
+.light:hover{
+    transform: scale(1.1);
+    
+}
+.Home-details p{
+    font-family: "Caveat", cursive;
+
+}
+.word-span{
+    padding-left: 1rem;
+}
+
+.menu{
+    font-size: 70px;
+    cursor: pointer;
+    transition: transform 1s ease;
+    z-index: 4;
+   position: relative;
+}
+.menu:hover {
+    transform: scale(1.1); /* Add hover effect */
+  }
+
+.box-2{
+    position: relative;
+    
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   
+    
+}
+.menu-box{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+.box-2-inner {
+    display: none;
+    background: rgb(114, 14, 14);
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    top: -35px;
+    padding: 56px;
+    right: -35px;
+    transition: height 0.1s ease;
+    height:100vh;
+    
+}
+.box-2-inner.open {
+    height:100vh
+  }
+
+.box-2-inner ul{
+    padding-top: 6rem;
+
+}
+.box-2-inner li{
+    list-style: none;
+    font-size: 30px;
+    padding: 10px 0px;
+    
+
+}
+
