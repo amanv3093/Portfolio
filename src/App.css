@@ -8,17 +8,6 @@
 body{
   overflow-x: hidden;
 }
-.word {
-    display: inline-block;
-    font-size: 37px;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    font-weight: 900;
-  }
-  .word:hover {
-    color: red; /* Change to the desired hover color */
-  }
-
 
    .bouncy {
     animation: bounce 0.5s infinite alternate;

@@ -14,6 +14,26 @@ nav{
     
    
 }
+
+.word {
+  display: inline-block;
+  font-size: 37px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-weight: 900;
+  
+  
+}
+.word:hover {
+  color: red; /* Change to the desired hover color */
+}
+.anchor1{
+  cursor: pointer;
+  color: black;
+}
+.material-symbols-outlined{
+  cursor: pointer;
+}
 .box-1{
   
 }

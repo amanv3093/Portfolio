@@ -32,19 +32,27 @@ function Home() {
   let handleLight=()=>{
     let menuBox=document.querySelector('.menu-box')
     let HomeDetails=document.querySelector('.Home-details')
+    let anchor1=document.querySelectorAll('.anchor1')
     
     if(isLight){
       setIsLight(false)
       document.body.style.background="black"
-      document.body.style.color="white"
-      HomeDetails.style.color="#4cc2cd"
+      document.body.style.color="#551a8b"
+      
+      for (let i = 0; i < anchor1.length; i++) {
+        anchor1[i].style.color = "#551a8b";
+      }
+      // HomeDetails.style.color="#4cc2cd"
       HomeDetails.style.background="black"
       
     }else{
       setIsLight(true)
       document.body.style.background="white"
       document.body.style.color="black"
-      HomeDetails.style.color="black"
+      for (let i = 0; i < anchor1.length; i++) {
+        anchor1[i].style.color = "black";
+      }
+      // HomeDetails.style.color="black"
       HomeDetails.style.background="white"
     }
    
@@ -96,23 +104,23 @@ console.log(filled);
         <div className='menu-box'>
         
            <ul className='menu2'>
-             <li><a href='#about'><Word word="About" /></a></li>
-             <li><a href='#skill'><Word word="Skill" /></a></li>
-              <li><a href='#project'><Word word="Project" /></a></li>
-              <li><a href='#contact'><Word word="Contact" /></a></li>
+             <li><a className='anchor1'  href='#about'><Word word="About" /></a></li>
+             <li><a className='anchor1' href='#skill'><Word word="Skill" /></a></li>
+              <li><a className='anchor1' href='#project'><Word word="Project" /></a></li>
+              <li><a className='anchor1' href='#contact'><Word word="Contact" /></a></li>
              
               
             </ul>
-            <span onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
-            <span onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
+            <span  onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
+            <span  onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
         
           </div>
           <div className='box-2-inner' style={{}}>
             <ul>
-            <li><Word word="About" /></li>
-             <li><Word word="Skill" /></li>
-              <li><Word word="Project" /></li>
-              <li><Word word="Contact" /></li>
+            <li><a className='anchor1' href='#about'><Word word="About" /></a></li>
+             <li><a className='anchor1' href='#skill'><Word word="Skill" /></a></li>
+              <li><a className='anchor1' href='#project'><Word word="Project" /></a></li>
+              <li><a className='anchor1' href='#contact'><Word word="Contact" /></a></li>
               
             </ul>
           </div>

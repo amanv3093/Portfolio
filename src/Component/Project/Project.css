@@ -11,3 +11,8 @@
     font-size: 70px;
 
 }
+.card-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
