@@ -42,13 +42,13 @@ function Hero() {
   return (
     <div className='hero-section demo' ref={compRef}>
       <div className='hero-section-box-1' id="textblock">
-        <h1 className='cssanimation leMagnify sequence'>Hi! I'm Aman Verma</h1>
-        <h2 className='cssanimation leMagnify sequence'>And I'm Front-End Developer</h2>
-        <p>Resolving design problems, building smart user interfaces <br /> and useful interactions, developing rich web applications <br /> and seamless web experiences.</p>
+        <h1 data-aos="zoom-out" className='cssanimation leMagnify sequence'>Hi! I'm Aman Verma</h1>
+        <h2 data-aos="zoom-out" className='cssanimation leMagnify sequence'>And I'm Front-End Developer</h2>
+        <p data-aos="zoom-out">Resolving design problems, building smart user interfaces <br /> and useful interactions, developing rich web applications <br /> and seamless web experiences.</p>
       </div>
       <div className='hero-section-box-2 stage'>
          
-           <div class="box bounce-1">If you're in need of a Front-End developer, you've come to the right place!</div>
+           <div data-aos="zoom-out" class="box bounce-1">If you're in need of a Front-End developer, you've come to the right place!</div>
          
       </div>
     </div>

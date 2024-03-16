@@ -44,11 +44,11 @@ function About() {
 
   }, []);
   return (
-    <div className='About' id="about" ref={compRef} data-aos="zoom-out">
+    <div className='About' id="about" ref={compRef}   >
       <div className='About-heading' >
         <p className='cssanimation leMagnify sequence'>Get To Know More</p>
-        <h2 >About Me</h2>
-        <div className='about-icon-box'>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">About Me</h2>
+        <div className='about-icon-box' data-aos="zoom-out" data-aos-duration="1000">
           <i className="icon1 fa-brands fa-github"></i>
           <i className="icon1 fa-brands fa-linkedin"></i>
           <i className="icon1 fa-regular fa-envelope"></i>
@@ -56,10 +56,10 @@ function About() {
         </div>
       </div>
       <div className='About-box2' id='textblock2' >
-        <p className='para1'>
+        <p className='para1' data-aos="zoom-out">
           Hello! I'm Aman, a passionate Bachelor of Computer Application student based in India. I find joy in creating digital wonders that come to life on the internet. As a developer, I specialize in crafting exceptional websites and web applications that offer intuitive, pixel-perfect user interfaces.
         </p>
-        <p className='para2'>
+        <p className='para2' data-aos="zoom-out">
           In other words, I'm dedicated to building digital experiences that not only function flawlessly but also delight users with their simplicity and elegance. Let's bring your ideas to life and make an impact in the online world together!
         </p>
       </div>
