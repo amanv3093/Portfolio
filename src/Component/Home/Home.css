@@ -1,8 +1,17 @@
+nav{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+}
+
 .Home-details{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
+   
+    
    
 }
 .box-1{
@@ -22,6 +31,8 @@
 }
 .Home-details p{
     font-family: "Caveat", cursive;
+    position: relative;
+    z-index: 4;
 
 }
 .word-span{
@@ -55,7 +66,7 @@
 }
 .box-2-inner {
     display: none;
-    background: rgb(114, 14, 14);
+    background: rgb(255, 254, 254);
     position: absolute;
     z-index: 3;
     bottom: 0;
@@ -82,3 +93,69 @@
 
 }
 
+.menu2{
+  display: flex;
+  gap: 25px;
+  
+
+}
+.menu2 li{
+  list-style: none;
+  font-family: "Caveat", cursive;
+}
+@keyframes bounceInRight {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      transform: translate3d(3000px, 0, 0) scaleX(3);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(-25px, 0, 0) scaleX(1);
+    }
+  
+    75% {
+      transform: translate3d(10px, 0, 0) scaleX(0.98);
+    }
+  
+    90% {
+      transform: translate3d(-5px, 0, 0) scaleX(0.995);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceInRight {
+    animation-name: bounceInRight;
+  }
+
+  .leMagnify span { animation-name: leMagnify }
+@keyframes leMagnify {
+    50% {
+        transform: scale(1.8);
+        letter-spacing: 26px
+    }
+}
+@media screen and (max-width:420px){
+  .menu2{
+    display: none;
+  }
+  .box-2-inner{
+    width: 100vw;
+  }
+}
+@media screen and (min-width:421px) and (max-width:1440px){
+  .menu{
+    display: none;
+  }
+}

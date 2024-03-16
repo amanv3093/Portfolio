@@ -5,13 +5,17 @@
     padding: 35px;
     padding-top: 5rem;
     word-wrap: break-word;
+    height: calc(100vh - 140px);
+    font-size: 1.5rem;
+    text-align: left;
+   
 
 }
 .hero-section-box-1{
-width: 50%;
+width: 60%;
 }
 .hero-section-box-1 h1{
-    font-size: 45px;
+    font-size: 70px;
 }
 .hero-section-box-1 h2{
     padding-top: 10px;
@@ -21,9 +25,62 @@ width: 50%;
     font-family: "Caveat", cursive;
     font-size: 25px;
     padding-top: 1rem;
+    width: 31rem;
 
 }
 .hero-section-box-2{
-    width: 50%;
+    width: 30%;
 
+}
+
+/* Define the CSS animation */
+.leKickOutFront span { animation-name: leKickOutBehind; transform-origin: top }
+@keyframes leKickOutBehind {
+    40% { transform: rotate(-45deg) }
+    100% {
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0,.9,.7,1.45)
+    }
+}
+
+.leMagnify span { animation-name: leMagnify }
+@keyframes leMagnify {
+    50% {
+        transform: scale(1.8);
+        letter-spacing: 26px
+    }
+}
+.stage {
+    border-bottom: 3px solid #444;
+    display: flex;
+    
+}
+.box {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color: #5a5757;
+    height: 200px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    width: 200px;
+    
+}
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+    font-size: 23px;
+    font-family: "Caveat", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    border-radius: 12px;
+
+}
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
 }

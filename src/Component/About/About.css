@@ -1,0 +1,60 @@
+.About{
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    
+}
+.About-heading{
+    text-align: center;
+    display: inline-block;
+
+
+}
+.About-heading p{
+    font-size: 14px;
+    color: #7a6e6e;
+
+}
+.About-heading h2{
+    font-size: 70px;
+
+}
+.About-box2{
+    font-family: "Caveat", cursive;
+    width: 50%;
+    
+
+}
+.About-box2 p{
+    font-size: 28px;
+}
+.about-icon-box{
+    padding-top: 1rem;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+
+}
+.about-icon-box .icon1{
+    font-size: 40px;
+    transition: transform 1s ease;
+}
+
+
+    
+
+.icon1:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+.leMagnify span { animation-name: leMagnify }
+@keyframes leMagnify {
+    50% {
+        transform: scale(1.8);
+        letter-spacing: 26px
+    }
+}

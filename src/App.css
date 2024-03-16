@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
     
 }
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .word {
     display: inline-block;
@@ -30,3 +31,9 @@ body{
       transform: translateY(-5px);
     }
   } 
+
+
+
+
+
+ 

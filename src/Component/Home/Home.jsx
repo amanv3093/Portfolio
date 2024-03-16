@@ -4,7 +4,7 @@ import Word from '../../Word';
 import { useState,useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Hero from '../Hero/Hero';
+
 function Home() {
   let [isHovered,setIsHovered]=useState(true)
   const [filled, setFilled] = useState(0);
@@ -38,13 +38,14 @@ function Home() {
       document.body.style.background="black"
       document.body.style.color="white"
       HomeDetails.style.color="#4cc2cd"
-      
+      HomeDetails.style.background="black"
       
     }else{
       setIsLight(true)
       document.body.style.background="white"
       document.body.style.color="black"
       HomeDetails.style.color="black"
+      HomeDetails.style.background="white"
     }
    
     
@@ -69,9 +70,9 @@ console.log(filled);
   return (
     <nav>
     <div className='Home-details'>
-      <div className='box-1' data-aos="fade-right">
+      <div className='box-1 '  >
         <p>
-         <span >
+         <span  >
 
             <Word word="A" />
             <Word word="M" />
@@ -79,7 +80,7 @@ console.log(filled);
             <Word word="N" />
 
           </span>
-          <span className='word-span'>
+          {/* <span className='word-span'>
 
             <Word word="V" />
             <Word word="E" />
@@ -87,24 +88,31 @@ console.log(filled);
             <Word word="M" />
             <Word word="A" />
 
-          </span>
+          </span> */}
         </p>
       </div>
    
-      <div className='box-2' data-aos="fade-left">
+      <div className='box-2'>
         <div className='menu-box'>
-        <span onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
-        <span onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
+        
+           <ul className='menu2'>
+             <li><a href='#about'><Word word="About" /></a></li>
+             <li><a href='#skill'><Word word="Skill" /></a></li>
+              <li><a href='#project'><Word word="Project" /></a></li>
+              <li><a href='#contact'><Word word="Contact" /></a></li>
+             
+              
+            </ul>
+            <span onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
+            <span onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
         
           </div>
-          <div className='box-2-inner' style={{height:`${filled}vh` , background:filled > 50 ? '#e8e8ed' : 'transparent'}}>
+          <div className='box-2-inner' style={{}}>
             <ul>
-              <li><Word word="Home" /></li>
+            <li><Word word="About" /></li>
+             <li><Word word="Skill" /></li>
               <li><Word word="Project" /></li>
-              <li><Word word="About" /></li>
-              <li><Word word="Skill" /></li>
               <li><Word word="Contact" /></li>
-              <li><Word word="Resume" /></li>
               
             </ul>
           </div>
@@ -112,9 +120,13 @@ console.log(filled);
         
       </div>
     </div>
-    <Hero/>
+   
+    
     </nav>
   );
 }
 
 export default Home;
+
+
+

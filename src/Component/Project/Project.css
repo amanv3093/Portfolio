@@ -1,0 +1,13 @@
+#profile{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    height: 100vh;
+  
+}
+.profile-heading h2{
+    font-size: 70px;
+
+}
