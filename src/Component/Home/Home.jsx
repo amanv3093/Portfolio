@@ -48,14 +48,14 @@ function Home() {
       
     }else{
       setIsLight(true)
-      document.body.style.background="white"
+      document.body.style.background="#f8f8f8"
       document.body.style.color="black"
       setHandleColor('black')
       for (let i = 0; i < anchor1.length; i++) {
         anchor1[i].style.color = "black";
       }
       // HomeDetails.style.color="black"
-      HomeDetails.style.background="white"
+      HomeDetails.style.background="#f8f8f8"
     }
    
     
@@ -77,6 +77,21 @@ function Home() {
 
 console.log(filled);
   
+
+const downloadResume = () => {
+  // Assuming your resume file is located at a specific URL
+  const resumeUrl = 'https://example.com/your-resume.pdf';
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  // Set the download attribute and filename
+  link.setAttribute('download', 'your-resume.pdf');
+  // Simulate a click on the link
+  document.body.appendChild(link);
+  link.click();
+  // Clean up
+  document.body.removeChild(link);
+};
   return (
     <nav>
     <div className='Home-details'>
@@ -110,7 +125,7 @@ console.log(filled);
              <li><a className='anchor1' href='#skill'><Word word="Skill" /></a></li>
               <li><a className='anchor1' href='#project'><Word word="Project" /></a></li>
               <li><a className='anchor1' href='#contact'><Word word="Contact" /></a></li>
-             
+              <li onClick={downloadResume}><a className='anchor1' href='#'><Word word="Resume" /></a></li>
               
             </ul>
             <span  onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
@@ -123,6 +138,7 @@ console.log(filled);
              <li><a className='anchor1' href='#skill'><Word word="Skill" /></a></li>
               <li><a className='anchor1' href='#project'><Word word="Project" /></a></li>
               <li><a className='anchor1' href='#contact'><Word word="Contact" /></a></li>
+              <li onClick={downloadResume}><a className='anchor1' href='#'><Word word="Resume" /></a></li>
               
             </ul>
           </div>
