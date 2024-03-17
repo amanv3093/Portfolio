@@ -5,21 +5,24 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './Project.css'
+import { UseColorContext } from '../../Context/Context';
 
 
-
-
-export default function MediaCard() {
+// box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 12px
+export default function MediaCard(props) {
+  let {handleColor}=UseColorContext();
   return (
+    <div style={{ boxShadow: `${handleColor === 'black' ? 'gray' : '#551a8b'} 0px 0px 10px`,width:'25%',borderRadius:'4px' }}>
     <Card sx={{ maxWidth: 345 }} data-aos="zoom-out">
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={props.img1}
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {props.projectName}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -27,9 +30,10 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small"><a className='anchor3' target='_blank' href={props.code}>View Code</a></Button>
+        <Button size="small"><a className='anchor3' target='_blank' href={props.livelink}>Go live</a></Button>
       </CardActions>
     </Card>
+    </div>
   );
 }

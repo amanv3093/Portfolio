@@ -1,14 +1,15 @@
 
 import './Home.css';
 import Word from '../../Word';
-import { useState,useEffect } from 'react';
+import { useState,useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { UseColorContext } from '../../Context/Context';
 
 function Home() {
   let [isHovered,setIsHovered]=useState(true)
   const [filled, setFilled] = useState(0);
-
+  let {setHandleColor}=UseColorContext()
   let [isLight,setIsLight]=useState(true)
   useEffect(() => {
     AOS.init();
@@ -38,7 +39,7 @@ function Home() {
       setIsLight(false)
       document.body.style.background="black"
       document.body.style.color="#551a8b"
-      
+      setHandleColor('#551a8b')
       for (let i = 0; i < anchor1.length; i++) {
         anchor1[i].style.color = "#551a8b";
       }
@@ -49,6 +50,7 @@ function Home() {
       setIsLight(true)
       document.body.style.background="white"
       document.body.style.color="black"
+      setHandleColor('black')
       for (let i = 0; i < anchor1.length; i++) {
         anchor1[i].style.color = "black";
       }

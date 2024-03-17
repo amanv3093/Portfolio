@@ -2,6 +2,7 @@ import './About.css';
 import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
+import { UseColorContext } from '../../Context/Context';
 
 
 
@@ -43,16 +44,18 @@ function About() {
     };
 
   }, []);
+
+  let {handleColor}=UseColorContext()
   return (
     <div className='About' id="about" ref={compRef}   >
       <div className='About-heading' >
         <p className='cssanimation leMagnify sequence'>Get To Know More</p>
         <h2 data-aos="zoom-out" data-aos-duration="1000">About Me</h2>
         <div className='about-icon-box' data-aos="zoom-out" data-aos-duration="1000">
-          <i className="icon1 fa-brands fa-github"></i>
-          <i className="icon1 fa-brands fa-linkedin"></i>
-          <i className="icon1 fa-regular fa-envelope"></i>
-          <i className="icon1 fa-brands fa-x-twitter"></i>
+          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://github.com/amanv3093'><i className="icon1 fa-brands fa-github"></i></a>
+          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://www.linkedin.com/in/aman-verma-180a04243/'><i className="icon1 fa-brands fa-linkedin"></i></a>
+          <a style={{color:handleColor==="black"?"black":'#551a8b'}}  href='mailto:amanv3093@gmail.com'><i className="icon1 fa-regular fa-envelope"></i></a>
+          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://twitter.com/Amanver59327311'><i className="icon1 fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <div className='About-box2' id='textblock2' >
