@@ -56,7 +56,9 @@
 .css-16cvb1l-MuiCardMedia-root{
     height: 40vh;
 }
-   
+.css-pqdqbj{
+    height: 40vh;
+}  
 @media screen and (max-width:768px){
     .card-box{
         flex-direction: column;
