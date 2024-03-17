@@ -56,7 +56,7 @@ function Skill() {
 
   return (
     <div className='Skill' id='skill' ref={compRef}>
-      <div className='Skill-heading' data-aos="zoom-out-left" data-aos-duration="1000">
+      <div className='Skill-heading' data-aos="zoom-out" data-aos-duration="1000">
         <h2>Skills</h2>
       </div>
 

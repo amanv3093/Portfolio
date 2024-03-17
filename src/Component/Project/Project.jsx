@@ -11,7 +11,7 @@ function Project() {
 
   return (
     <div id='project'>
-     <div className='project-heading' data-aos="zoom-out-left" data-aos-duration="1000">
+     <div className='project-heading' data-aos="zoom-out" data-aos-duration="1000">
        <h2>Project</h2>
 
      </div>
