@@ -25,7 +25,7 @@ nav{
   
 }
 .word:hover {
-  color: red; /* Change to the desired hover color */
+  color: rgb(230, 59, 59); /* Change to the desired hover color */
 }
 .anchor1{
   cursor: pointer;
@@ -166,16 +166,24 @@ nav{
         letter-spacing: 26px
     }
 }
-@media screen and (max-width:420px){
+@media screen and (max-width:768px){
   .menu2{
     display: none;
+  }
+  .menu{
+    display: block;
   }
   .box-2-inner{
     width: 100vw;
   }
+  
 }
-@media screen and (min-width:421px) and (max-width:1440px){
-  .menu{
+
+@media screen and  (min-width:769px){
+  .menu2{
     display: none;
+  }
+  .menu{
+    display: block;
   }
 }

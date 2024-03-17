@@ -13,10 +13,10 @@ import { UseColorContext } from '../../Context/Context';
 export default function MediaCard(props) {
   let {handleColor}=UseColorContext();
   return (
-    <div style={{ boxShadow: `${handleColor === 'black' ? 'gray' : '#551a8b'} 0px 0px 10px`,width:'25%',borderRadius:'4px' }}>
-    <Card sx={{ maxWidth: 345 }} data-aos="zoom-out">
+    <div className='box8' style={{ boxShadow: `${handleColor === 'black' ? 'gray' : '#551a8b'} 0px 0px 10px`,width:'25%',borderRadius:'4px' ,height:"40vh"}}>
+    <Card  data-aos="zoom-out">
       <CardMedia
-        sx={{ height: 140 }}
+       
         image={props.img1}
         title="green iguana"
       />

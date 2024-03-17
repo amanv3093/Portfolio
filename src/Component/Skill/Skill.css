@@ -2,9 +2,9 @@
     padding: 35px;
     display: flex;
     flex-direction: column;
-    
+    padding-top: 10rem;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
   
 }
 .Skill-heading h2{
@@ -79,3 +79,21 @@
     color:gray;
     transform: scale(1.1);
 }
+@media screen and (max-width:425px){
+    .skill{
+        padding-top: 20rem;
+    }
+    .skill-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .skill-Inner-box{
+        flex-direction: row;
+        
+    }
+    
+  }
+  
+  @media screen and (min-width:426px) and (max-width:1440px){
+    
+  }

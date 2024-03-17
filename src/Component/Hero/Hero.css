@@ -5,7 +5,7 @@
     padding: 35px;
     padding-top: 5rem;
     word-wrap: break-word;
-    height: calc(100vh - 140px);
+    /* height: calc(100vh - 140px); */
     font-size: 1.5rem;
     text-align: left;
    
@@ -84,3 +84,34 @@ width: 60%;
     50%  { transform: translateY(-100px); }
     100% { transform: translateY(0); }
 }
+
+
+@media screen and (max-width:425px){
+    .hero-section{
+        flex-direction: column;
+        padding-top: 0;
+        padding: 0;
+    }
+    .stage{
+        padding-top: 6rem;
+        width: 100%;
+    }
+    
+    
+.hero-section-box-1 p {
+    width: 100%;
+}
+.hero-section-box-1 h1{
+    font-size: 30px;
+}
+.menu{
+    font-size: 40px;
+}
+.light{
+    font-size: 40px;
+}
+  }
+  
+  @media screen and (min-width:426px) and (max-width:1440px){
+    
+  }

@@ -12,6 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Project from './Component/Project/Project.jsx';
 import Skill from './Component/Skill/Skill.jsx';
+import Contact from './Component/Contact/Contact.jsx';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -27,6 +28,7 @@ function App() {
      <About />
      <Skill />
      <Project />
+     <Contact />
     </div>
   );
 }

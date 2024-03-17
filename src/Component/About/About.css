@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    padding-top: 10rem;
+    /* height: 70vh; */
     
 }
 .About-heading{
@@ -58,3 +59,21 @@
         letter-spacing: 26px
     }
 }
+
+@media screen and (max-width:768px){
+    .About{
+        flex-direction: column;
+        padding-top: 2rem;
+
+    }
+    .About-box2{
+        width: 100%;
+        padding-top: 2rem;
+
+    }
+    
+  }
+  
+  @media screen and (min-width:426px) and (max-width:1440px){
+    
+  }

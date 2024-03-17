@@ -2,9 +2,9 @@
     padding: 35px;
     display: flex;
     flex-direction: column;
-    
+    padding-top: 10rem;
     justify-content: center;
-    height: 100vh;
+   
   
 }
 .project-heading h2{
@@ -53,6 +53,27 @@
     font-size: 13px;
     font-weight: 800;
 }
-
+.css-16cvb1l-MuiCardMedia-root{
+    height: 40vh;
+}
    
+@media screen and (max-width:768px){
+    .card-box{
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+    .css-1999db7-MuiCardMedia-root{
+        width: 100% !important;
+    }
+    .box8{
+        width: 100% !important;
+        height: 82vh !important;
+        
+    }
+    
+  }
   
+  @media screen and (min-width:426px) and (max-width:1440px){
+    
+  }

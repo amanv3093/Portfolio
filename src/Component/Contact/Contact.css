@@ -1,0 +1,40 @@
+#contact{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18rem 0rem;
+    padding-bottom: 10rem;
+}
+.contact-head{
+    font-size: 50px;
+}
+.Contact-icon-box{
+    display: flex;
+    gap: 32px;
+}
+.Contact-icon-box a{
+    font-size: 40px;
+    transition: transform 1s ease;
+}
+
+.Contact-icon-box :hover{
+    transform: scale(1.1);
+}
+
+
+
+    
+@media screen and (max-width:768px){
+    .contact-head {
+        font-size: 30px;
+    }
+    #contact{
+        padding-top: 2rem !important;
+    }
+  }
+  
+  @media screen and (min-width:426px) and (max-width:1440px){
+    
+  }
+
