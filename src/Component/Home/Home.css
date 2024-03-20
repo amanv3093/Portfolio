@@ -78,7 +78,7 @@ nav{
    display: flex;
    align-items: center;
    gap: 20px;
-   
+   transition: left 4s ease-in;
     
 }
 .menu-box{
@@ -87,18 +87,23 @@ nav{
    gap: 30px;
 }
 .box-2-inner {
-    display: none;
-    background-color: #f8f8f8;
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    top: -39px;
-    padding: 56px;
-    right: -35px;
-    transition: height 0.1s ease;
-    height:100vh;
-    
+
+  background-color: #f8f8f8;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  top: -39px;
+  padding: 56px;
+  right: -900px;
+  height: 100vh;
+  transition: right 0.8s ease-in;
 }
+
+.box-2-inner.visible {
+ 
+  right: -35px;
+}
+
 .box-2-inner.open {
     height:100vh
   }

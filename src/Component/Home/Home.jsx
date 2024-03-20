@@ -11,20 +11,26 @@ function Home() {
   const [filled, setFilled] = useState(0);
   let {setHandleColor}=UseColorContext()
   let [isLight,setIsLight]=useState(true)
+  const [boxInnerVisible, setBoxInnerVisible] = useState(false);
   useEffect(() => {
     AOS.init();
   }, [])
 
   let handleToggle=()=>{
+    setBoxInnerVisible(prevVisible => !prevVisible);
     let box2Inner=document.querySelector('.box-2-inner')
     if(isHovered){
       setIsHovered(false)
-      box2Inner.style.display='block'
+      // box2Inner.style.display='block'
+      // box2Inner.style.transition='0.8s ease-in'
+      // box2Inner.style.right='-35px'
       setFilled(0)
     }else{
       setIsHovered(true)
+      // box2Inner.style.display='none'
+      // box2Inner.style.transition='0.8s ease-in'
+      // box2Inner.style.right='-450px'
       
-      box2Inner.style.display='none'
     }
    
     
@@ -134,7 +140,7 @@ const downloadResume = () => {
             <span  onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
         
           </div>
-          <div className='box-2-inner' style={{}}>
+          <div className={`box-2-inner ${boxInnerVisible ? 'visible' : ''}`}>
             <ul>
             <li><a onClick={handleToggle} className='anchor1'  href='#about'><Word word="About" /></a></li>
              <li><a onClick={handleToggle} className='anchor1' href='#skill'><Word word="Skill" /></a></li>
