@@ -19,14 +19,17 @@ function Home() {
   let handleToggle=()=>{
     setBoxInnerVisible(prevVisible => !prevVisible);
     let box2Inner=document.querySelector('.box-2-inner')
+    let menu=document.querySelector('#Menu')
     if(isHovered){
       setIsHovered(false)
+         menu.style.transition='0.8s ease-in'
       // box2Inner.style.display='block'
       // box2Inner.style.transition='0.8s ease-in'
       // box2Inner.style.right='-35px'
       setFilled(0)
     }else{
       setIsHovered(true)
+      menu.style.transition='0.8s ease-in'
       // box2Inner.style.display='none'
       // box2Inner.style.transition='0.8s ease-in'
       // box2Inner.style.right='-450px'
@@ -137,7 +140,7 @@ const downloadResume = () => {
               
             </ul>
             <span  onClick={handleLight} className="material-symbols-outlined light">{isLight ? `clear_night`:`light_mode`}</span>
-            <span  onClick={handleToggle} className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
+            <span  onClick={handleToggle} id='Menu' className="material-symbols-outlined menu">{isHovered ? `menu`:`close`}</span>
         
           </div>
           <div className={`box-2-inner ${boxInnerVisible ? 'visible' : ''}`}>
