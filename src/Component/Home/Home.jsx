@@ -34,11 +34,12 @@ function Home() {
     let menuBox=document.querySelector('.menu-box')
     let HomeDetails=document.querySelector('.Home-details')
     let anchor1=document.querySelectorAll('.anchor1')
-    
+    let box2Inner=document.querySelector('.box-2-inner')
     if(isLight){
       setIsLight(false)
       document.body.style.background="black"
       document.body.style.color="#551a8b"
+      box2Inner.style.background="black"
       setHandleColor('#551a8b')
       for (let i = 0; i < anchor1.length; i++) {
         anchor1[i].style.color = "#551a8b";
@@ -55,6 +56,7 @@ function Home() {
         anchor1[i].style.color = "black";
       }
       // HomeDetails.style.color="black"
+      box2Inner.style.background="#f8f8f8"
       HomeDetails.style.background="#f8f8f8"
     }
    
@@ -134,10 +136,10 @@ const downloadResume = () => {
           </div>
           <div className='box-2-inner' style={{}}>
             <ul>
-            <li><a className='anchor1' href='#about'><Word word="About" /></a></li>
-             <li><a className='anchor1' href='#skill'><Word word="Skill" /></a></li>
-              <li><a className='anchor1' href='#project'><Word word="Project" /></a></li>
-              <li><a className='anchor1' href='#contact'><Word word="Contact" /></a></li>
+            <li><a onClick={handleToggle} className='anchor1'  href='#about'><Word word="About" /></a></li>
+             <li><a onClick={handleToggle} className='anchor1' href='#skill'><Word word="Skill" /></a></li>
+              <li><a onClick={handleToggle} className='anchor1' href='#project'><Word word="Project" /></a></li>
+              <li><a onClick={handleToggle} className='anchor1' href='#contact'><Word word="Contact" /></a></li>
               <li onClick={downloadResume}><a className='anchor1' href='#'><Word word="Resume" /></a></li>
               
             </ul>

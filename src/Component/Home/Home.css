@@ -47,6 +47,8 @@ nav{
 }
 .light:hover{
     transform: scale(1.1);
+    color: rgb(230, 59, 59);
+    
     
 }
 .Home-details p{
@@ -90,7 +92,7 @@ nav{
     position: absolute;
     z-index: 3;
     bottom: 0;
-    top: -35px;
+    top: -39px;
     padding: 56px;
     right: -35px;
     transition: height 0.1s ease;
