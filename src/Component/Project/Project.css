@@ -1,87 +1,95 @@
-#project{
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10rem;
-    justify-content: center;
-   
-  
+#project {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  justify-content: center;
 }
-.project-heading h2{
-    font-size: 70px;
+.project-heading h2 {
+  font-size: 70px;
+}
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
 
+.css-1ri6ub7-MuiPaper-root-MuiCard-root {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 0px !important;
+  height: 70vh;
 }
-.card-box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 3rem;
-}
-.css-1ri6ub7-MuiPaper-root-MuiCard-root{
-     box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 0px !important;
-     height: 70vh;
-}
-.css-1999db7-MuiCardMedia-root{
+.css-1999db7-MuiCardMedia-root {
   height: 230px !important;
   border-bottom: 1px solid rgb(207, 204, 204);
- 
+}
+.MuiPaper-root {
+  height: 100%;
+  background-color: #f5f1f1 !important;
+  font-family: "Caveat", cursive !important;
+}
+.MuiTypography-root {
+  font-size: 26px;
+  font-weight: 500;
+  font-weight: 800 !important;
+  font-family: "Caveat", cursive !important;
+  font-size: 26px !important;
+}
 
+.MuiButtonBase-root {
+  background-color: rgb(0, 132, 255) !important;
+  padding: 7px 16px !important;
+  transition: transform 1s ease;
 }
-.MuiPaper-root{
-    background-color: #f5f1f1 !important;
+.MuiButtonBase-root:hover {
+  background-color: rgb(50, 147, 238) !important;
+  cursor: pointer;
+  transition: transform 1s ease;
+  transform: scale(1.1);
+}
+.anchor3 {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+.css-16cvb1l-MuiCardMedia-root {
+  height: 55%;
+}
+.css-46bh2p-MuiCardContent-root {
+  height: 30%;
+}
+/* .css-pqdqbj {
+  height: 60%;
+} */
+.css-dnrpxu-MuiCardActions-root {
+  height: 15%;
+  padding-bottom: 1rem !important;
+}
+.css-dnrpxu-MuiCardActions-root button {
+  font-family: "Caveat", cursive !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
 
+.css-r40f8v-MuiTypography-root {
+  font-family: "Caveat", cursive !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
 }
-.MuiTypography-root{
-    font-size: 26px;
-    font-weight: 500;
-}
-
-.MuiButtonBase-root{
-    background-color: rgb(0, 132, 255) !important;
-    padding: 7px 16px !important;
-    transition: transform 1s ease;
-}
-.MuiButtonBase-root:hover{
-    background-color: rgb(50, 147, 238) !important;
-    cursor: pointer;
-    transition: transform 1s ease;
-    transform: scale(1.1);
-}
-.anchor3{
-    text-decoration: none;
-    color: white;
-    font-size: 13px;
-    font-weight: 800;
-}
-.css-16cvb1l-MuiCardMedia-root{
-    height: 30vh;
-}
-.css-pqdqbj{
-    height: 40vh;
-} 
-.css-dnrpxu-MuiCardActions-root{
-    padding-bottom: 1rem !important;
-}
-.css-r40f8v-MuiTypography-root{
-    display: none;
-} 
-@media screen and (max-width:768px){
-    .card-box{
-        flex-direction: column;
-        gap: 40px;
-        
-    }
-    .css-1999db7-MuiCardMedia-root{
-        width: 100% !important;
-    }
-    .box8{
-        width: 100% !important;
-        height:100% !important;
-        
-    }
-    /* .project-heading h2{
+@media screen and (max-width: 768px) {
+  .card-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .css-1999db7-MuiCardMedia-root {
+    width: 100% !important;
+  }
+  .box8 {
+    width: 100% !important;
+    /* height: 100% !important; */
+  }
+  /* .project-heading h2{
         text-align: center;
     } */
-    
-  }
-  
+}
