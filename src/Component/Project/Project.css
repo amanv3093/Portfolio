@@ -29,11 +29,11 @@
   font-family: "Caveat", cursive !important;
 }
 .MuiTypography-root {
-  font-size: 26px !important;
-  font-weight: 500 !important;
+  font-size: 17px !important;
+  /* font-weight: 500 !important; */
   font-weight: 800 !important;
   font-family: "Caveat", cursive !important;
-  font-size: 26px !important;
+  /* font-size: 26px !important; */
 }
 
 .MuiButtonBase-root {
