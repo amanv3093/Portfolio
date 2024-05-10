@@ -96,3 +96,8 @@
         text-align: center;
     } */
 }
+@media screen and (min-width: 766px) and (max-width: 1024px) {
+  .css-pqdqbj {
+    height: 45% !important;
+  }
+}
