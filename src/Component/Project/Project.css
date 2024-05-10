@@ -29,8 +29,8 @@
   font-family: "Caveat", cursive !important;
 }
 .MuiTypography-root {
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 26px !important;
+  font-weight: 500 !important;
   font-weight: 800 !important;
   font-family: "Caveat", cursive !important;
   font-size: 26px !important;
@@ -53,11 +53,14 @@
   font-size: 13px;
   font-weight: 800;
 }
-.css-16cvb1l-MuiCardMedia-root {
-  height: 55%;
+.css-16cvb1l-MuiCardMedia-root,
+.css-pqdqbj {
+  height: 55% !important;
 }
 .css-46bh2p-MuiCardContent-root {
-  height: 30%;
+  height: 30% !important;
+}
+.MuiCardMedia-root {
 }
 /* .css-pqdqbj {
   height: 60%;
