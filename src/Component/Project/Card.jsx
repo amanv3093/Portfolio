@@ -13,7 +13,9 @@ export default function MediaCard(props) {
   let { handleColor } = UseColorContext();
   return (
     <div
-      className="box8"
+      className="box8 "
+      data-aos="zoom-out"
+      data-aos-duration="1000"
       style={{
         boxShadow: `${
           handleColor === "black" ? "gray" : "#551a8b"
