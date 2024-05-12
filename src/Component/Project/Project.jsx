@@ -13,7 +13,7 @@ function Project() {
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
-        <h2>Project</h2>
+        <h2 className="project-heading">Project</h2>
       </div>
       <div className="card-box">
         <Card
@@ -21,21 +21,21 @@ function Project() {
           projectName="TastyTrails"
           code="https://github.com/amanv3093/TastyTrails"
           livelink="tasty-trails-phi.vercel.app"
-          discription="Explore our food website, a blend of flavor and tech. Built with HTML, CSS, JavaScript, React, and Firebase. Enjoy seamless authentication and state management"
+          description="Explore our food website, a blend of flavor and tech. Built with HTML, CSS, JavaScript, React, and Firebase. Enjoy seamless authentication and state management."
         />
         <Card
           img1={img2}
           projectName="Tic-tac-Toi Game"
           code="https://github.com/amanv3093/Tic-tac-Toi"
           livelink="https://amanv3093.github.io/Tic-tac-Toi/"
-          discription="Experience the classic thrill of Tic-Tac-Toe with friends! Our game, built with HTML, CSS, and JavaScript, offers endless fun and friendly competition"
+          description="Experience the classic thrill of Tic-Tac-Toe with friends! Our game, built with HTML, CSS, and JavaScript, offers endless fun and friendly competition."
         />
         <Card
           img1={img3}
           projectName="Trendy-Threads"
           code="https://github.com/amanv3093/Trendy-Threads"
           livelink="https://trendy-threads.vercel.app/"
-          discription="Discover our e-commerce site, powered by HTML, CSS, JavaScript, React, Firebase, and Redux Toolkit. Enjoy seamless shopping with secure authentication and efficient state management."
+          description="Discover our e-commerce site, powered by HTML, CSS, JavaScript, React, Firebase, and Redux Toolkit. Enjoy seamless shopping with secure authentication and efficient state management."
         />
       </div>
     </div>

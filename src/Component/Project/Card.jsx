@@ -18,34 +18,43 @@ export default function MediaCard(props) {
         boxShadow: `${
           handleColor === "black" ? "gray" : "#551a8b"
         } 0px 0px 10px`,
-        width: "25%",
-        borderRadius: "4px",
-        height: "500px",
       }}
     >
-      <Card data-aos="zoom-out">
-        <CardMedia image={props.img1} title="green iguana" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {props.projectName}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {props.discription.slice(0, 160)}...
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">
-            <a className="anchor3" target="_blank" href={props.code}>
-              View Code
+      <div className="inner-box8">
+        <div className="inner-box8-image">
+          <img src={props.img1} alt="project-img" />
+        </div>
+        <div className="inner-box8-text">
+          <h2>{props.projectName}</h2>
+          <p
+            style={{
+              color: `${handleColor === "black" ? "gray" : "#551a8b"}`,
+            }}
+          >
+            {props.description}
+          </p>
+        </div>
+        <div className="inner-box8-button">
+          <button
+            style={{
+              background: `${handleColor === "black" ? "#3293ee" : "#551a8b"}`,
+            }}
+          >
+            <a href={props.code} target="_blank">
+              View code
             </a>
-          </Button>
-          <Button size="small">
-            <a className="anchor3" target="_blank" href={props.livelink}>
-              Go live
+          </button>
+          <button
+            style={{
+              background: `${handleColor === "black" ? "#3293ee" : "#551a8b"}`,
+            }}
+          >
+            <a href={props.livelink} target="_blank">
+              Live code
             </a>
-          </Button>
-        </CardActions>
-      </Card>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
