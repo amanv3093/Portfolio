@@ -14,7 +14,7 @@
   padding-top: 3rem;
 }
 .box8 {
-  width: 30%;
+  width: 26%;
   font-size: 17px !important;
 
   font-weight: 800 !important;
@@ -25,10 +25,10 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 580px;
+  height: 530px;
 }
 .inner-box8-image {
-  height: 350px;
+  height: 290px;
   width: 100%;
 }
 .inner-box8-image img {
@@ -92,12 +92,45 @@
   font-weight: 800;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
+  #project {
+    padding: 0px;
+  }
+
+  .project-heading {
+    padding: 0rem 15px 9px;
+  }
   .card-box {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
   .box8 {
-    width: 100%;
+    width: 85%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 887px) {
+  #project {
+    padding: 0px;
+  }
+
+  .project-heading {
+    padding: 0rem 15px 9px;
+  }
+  .card-box {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .box8 {
+    width: 25rem;
+  }
+}
+@media screen and (min-width: 886px) and (max-width: 1024px) {
+  .box8 {
+    width: 23rem;
+  }
+  .card-box {
+    gap: 80px;
   }
 }
