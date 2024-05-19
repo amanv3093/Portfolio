@@ -20,7 +20,7 @@ function Project() {
           img1={img1}
           projectName="TastyTrails"
           code="https://github.com/amanv3093/TastyTrails"
-          livelink="tasty-trails-phi.vercel.app"
+          livelink="https://tasty-trails-phi.vercel.app/"
           description="Explore our food website, a blend of flavor and tech. Built with HTML, CSS, JavaScript, React, and Firebase. Enjoy seamless authentication and state management."
         />
         <Card
