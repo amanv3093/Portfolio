@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
-import { GrTwitter } from "react-icons/gr";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { GoMail } from "react-icons/go";
 import AOS from "aos";
@@ -67,7 +66,7 @@ const Navbar = () => {
           {[
             {
               link: Media__links.Twitter,
-              icon: <GrTwitter />,
+              icon: <i className="icon1 fa-brands fa-x-twitter"></i>,
               name: "Twitter",
             },
             {

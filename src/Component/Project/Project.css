@@ -105,3 +105,6 @@
   color: var(--secondary-text);
   margin-left: 20px;
 }
+.div3 a:hover {
+  color: var(--secondary);
+}
