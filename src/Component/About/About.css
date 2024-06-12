@@ -158,6 +158,9 @@
   .front-end {
     height: auto;
   }
+  .techo-section {
+    gap: 25px;
+  }
 }
 
 @media screen and (min-width: 496px) and (max-width: 944px) {
