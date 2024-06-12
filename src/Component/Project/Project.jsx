@@ -211,6 +211,49 @@ const Project = () => {
             friendly competition.
           </p>
         </div>
+        <div
+          className="div2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          <div className="div3">
+            <IconContext.Provider
+              value={{ size: "1.8rem", className: "react-icons" }}
+            >
+              <FiFolder />
+            </IconContext.Provider>
+
+            <span>
+              <a href="https://github.com/amanv3093/Emoji-" target="_blank">
+                <IconContext.Provider
+                  value={{ size: "1.2rem", className: "react-icons-link" }}
+                >
+                  <RiGithubLine />
+                </IconContext.Provider>
+              </a>
+
+              <a href="https://amanv3093.github.io/Emoji-/" target="_blank">
+                <IconContext.Provider
+                  value={{ size: "1.2rem", className: "react-icons-link" }}
+                >
+                  <GoLinkExternal />
+                </IconContext.Provider>
+              </a>
+            </span>
+          </div>
+
+          <h1 className="h1">
+            <a href="https://amanv3093.github.io/Emoji-/" target="_blank">
+              Emoji 🔍 Application
+            </a>
+          </h1>
+
+          <p className="p">
+            Creating an emoji application with HTML, CSS, and JavaScript that
+            includes search functionality can be a fun project.
+          </p>
+        </div>
       </div>
     </section>
   );
