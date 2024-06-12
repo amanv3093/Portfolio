@@ -6,12 +6,14 @@ import { IconContext } from "react-icons";
 import { FiFolder } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
 import { GoLinkExternal } from "react-icons/go";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Project = () => {
   useEffect(() => {
-    // Your useEffect code...
+    AOS.init({
+      duration: 300,
+    });
   }, []);
-
   return (
     <section className="container" id="Work">
       <div className="titles">
@@ -20,7 +22,12 @@ const Project = () => {
       </div>
 
       <div className="div1">
-        <div className="div2">
+        <div
+          className="div2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div className="div3">
             <IconContext.Provider
               value={{ size: "1.8rem", className: "react-icons" }}
@@ -63,7 +70,12 @@ const Project = () => {
           </p>
         </div>
 
-        <div className="div2">
+        <div
+          className="div2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div className="div3">
             <IconContext.Provider
               value={{ size: "1.8rem", className: "react-icons" }}
@@ -105,7 +117,12 @@ const Project = () => {
             secure authentication and efficient state management.
           </p>
         </div>
-        <div className="div2">
+        <div
+          className="div2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div className="div3">
             <IconContext.Provider
               value={{ size: "1.8rem", className: "react-icons" }}
@@ -144,7 +161,12 @@ const Project = () => {
             experience.
           </p>
         </div>
-        <div className="div2">
+        <div
+          className="div2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div className="div3">
             <IconContext.Provider
               value={{ size: "1.8rem", className: "react-icons" }}
