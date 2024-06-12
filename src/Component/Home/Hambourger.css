@@ -1,0 +1,126 @@
+/* Hambourgermenu.css */
+
+.Hambourger {
+  position: relative;
+  display: none;
+}
+
+.Span {
+  color: white;
+  display: none;
+  transition: all 0.7s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .Hambourger {
+    display: block;
+  }
+  .Span {
+    display: block;
+  }
+}
+
+.MenuMobile {
+  position: fixed;
+  right: 0;
+  width: 75%;
+  height: 100vh;
+  background-color: var(--secondary-bg);
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.MenuMobile span {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MenuMobile span a {
+  padding: 13px 30px;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  border-radius: 3px;
+}
+
+.List {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}
+
+.List a {
+  color: var(--primary-text);
+  text-decoration: none;
+  padding: 18px 0;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+}
+
+.BurgerMenu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 6;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+
+.BurgerMenu div {
+  width: 30px;
+  height: 2px;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  transform-origin: 7px;
+  transition: all 0.3s linear;
+}
+
+.BurgerMenu div:nth-child(1) {
+  transform: rotate(0);
+}
+
+.BurgerMenu div:nth-child(2) {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.BurgerMenu div:nth-child(3) {
+  transform: rotate(0);
+}
+
+.BurgerMenu.open div:nth-child(1) {
+  transform: rotate(45deg) translate(-5px, 5px);
+}
+
+.BurgerMenu.open div:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.BurgerMenu.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px, -5px);
+}

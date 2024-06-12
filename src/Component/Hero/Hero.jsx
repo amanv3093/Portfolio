@@ -1,72 +1,66 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Hero.css";
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
 
-gsap.registerPlugin(TextPlugin); // Register the TextPlugin with GSAP
+// import me from "../Images/profile.jpg";
+import resume from "../../Source/aman verma.pdf";
 
-function Hero() {
-  const compRef = useRef(null);
-
+const Hero = () => {
   useEffect(() => {
-    const tl = gsap.timeline({
-      defaults: { duration: 10, ease: "power3.out" },
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Start animation when the component is in view
-          tl.to("#textblock p", {
-            text: {
-              value: `Resolving design problems, building smart user interfaces and useful interactions, developing rich web applications and seamless web experiences.`,
-              scrambleText: {
-                chars: "lowerCase",
-                revealDelay: 0.5,
-                tweenLength: false,
-              },
-            },
-          });
-          observer.unobserve(entry.target); // Stop observing once animation is triggered
-        }
-      });
-    });
-
-    if (compRef.current) {
-      observer.observe(compRef.current); // Start observing the component
-    }
-
-    // Cleanup function
-    return () => {
-      if (compRef.current) {
-        observer.unobserve(compRef.current); // Stop observing when component unmounts
-      }
-    };
+    AOS.init({ duration: 200 });
   }, []);
 
   return (
-    <div className="hero-section demo" ref={compRef}>
-      <div className="hero-section-box-1" id="textblock">
-        <h1 data-aos="zoom-out" className="cssanimation leMagnify sequence">
-          Hi! I'm Aman Verma
-        </h1>
-        <h2 data-aos="zoom-out" className="cssanimation leMagnify sequence">
-          And I'm Front-End Developer
-        </h2>
-        <p data-aos="zoom-out">
-          Resolving design problems, building smart user interfaces <br /> and
-          useful interactions, developing rich web applications <br /> and
-          seamless web experiences.
-        </p>
-      </div>
-      <div className="hero-section-box-2 stage">
-        <div data-aos="zoom-out" class="box bounce-1">
-          If you're in need of a Front-End developer, you've come to the right
-          place!
+    <section id="Hero">
+      <div className="banner-hero">
+        <div className="left-hero">
+          <span data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            Front-End Developer
+          </span>
+          <blockquote
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="600"
+          >
+            Talk is cheap. <br /> Show me the code
+          </blockquote>
+          <p
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="800"
+          >
+            Resolving design problems, building smart user interfaces and useful
+            interactions, developing rich web applications and seamless web
+            experiences.
+          </p>
+          <a
+            href={resume}
+            target="_blank"
+            rel="noreferrer"
+            download="aman-resume"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="1000"
+          >
+            Get Resume
+          </a>
+        </div>
+        <div className="hero-section-box-2 stage">
+          <div data-aos="zoom-out" className="box bounce-1">
+            If you're in need of a Front-End developer, you've come to the right
+            place!
+          </div>
         </div>
       </div>
-    </div>
+      <div
+        className="experience"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000"
+      ></div>
+    </section>
   );
-}
+};
 
 export default Hero;

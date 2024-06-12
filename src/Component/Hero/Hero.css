@@ -1,119 +1,266 @@
-.hero-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px;
-    padding-top: 5rem;
-    word-wrap: break-word;
-    /* height: calc(100vh - 140px); */
-    font-size: 1.5rem;
-    text-align: left;
-   
+/* Hero.css */
+#Hero {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 90px 0 70px 0;
+}
 
+/* Media mobile */
+@media (max-width: 480px) {
+  #Hero {
+    height: auto;
+    padding: 200px 0 25px 0;
+  }
 }
-.hero-section-box-1{
-width: 60%;
-}
-.hero-section-box-1 h1{
-    font-size: 70px;
-}
-.hero-section-box-1 h2{
-    padding-top: 10px;
 
+/* Media Tablette */
+@media (min-width: 481px) and (max-width: 768px) {
+  #Hero {
+    height: auto;
+    padding: 30px 0 25px 0;
+  }
 }
-.hero-section-box-1 p{
-    font-family: "Caveat", cursive;
-    font-size: 25px;
-    padding-top: 1rem;
-    width: 31rem;
 
+.banner-hero {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 20px 70px;
 }
-.hero-section-box-2{
-    width: 30%;
 
+.banner-hero span {
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  font-family: var(--titles);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.banner-hero blockquote {
+  font-size: 50px;
+  font-family: var(--titles);
+  line-height: 70px;
+  color: var(--secondary-text);
+  margin-bottom: 30px;
+}
+
+.banner-hero p {
+  font-size: 20px;
+  color: var(--primary-text);
+  width: auto;
+}
+
+.banner-hero a {
+  margin-top: 40px;
+  color: var(--secondary);
+  font-size: 20px;
+}
+
+/* Media mobile */
+@media (max-width: 480px) {
+  .banner-hero {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+}
+
+/* Media Tablette */
+@media (min-width: 481px) and (max-width: 768px) {
+  .banner-hero {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+}
+
+.left-hero {
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px 20px 60px;
+}
+
+.left-hero h1 {
+  font-size: 70px;
+}
+
+.left-hero h2 {
+  padding-top: 10px;
+}
+
+.left-hero p {
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+  padding-top: 1rem;
+  width: 31rem;
+}
+
+/* Media mobile */
+@media (max-width: 480px) {
+  #Hero {
+    height: auto;
+    padding: 30px 0 25px 0;
+  }
+  .left-hero {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 25px;
+    margin-top: 20px;
+  }
+
+  .left-hero span {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .left-hero blockquote {
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .left-hero p {
+    font-size: 20px;
+    color: var(--primary-text);
+    width: 100%;
+  }
+
+  .left-hero a {
+    margin-top: 40px;
+    color: var(--secondary);
+    font-size: 20px;
+  }
+
+  .left-hero h1 {
+    font-size: 30px;
+  }
+}
+
+/* Media Tablette */
+@media (min-width: 481px) and (max-width: 768px) {
+  .left-hero {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 30px;
+    margin-top: 20px;
+  }
+}
+
+.stage {
+  border-bottom: 3px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  width: 30%;
+}
+
+/* Media mobile */
+@media (max-width: 480px) {
+  .stage {
+    padding-top: 10rem;
+    width: 80%;
+  }
+}
+
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: #5a5757;
+  height: 200px;
+  margin: 0 auto;
+  transform-origin: bottom;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-family: "Caveat", cursive;
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+}
+
+.bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Define the CSS animation */
-.leKickOutFront span { animation-name: leKickOutBehind; transform-origin: top }
+.leKickOutFront span {
+  animation-name: leKickOutBehind;
+  transform-origin: top;
+}
+
 @keyframes leKickOutBehind {
-    40% { transform: rotate(-45deg) }
-    100% {
-        transform: rotate(0deg);
-        animation-timing-function: cubic-bezier(0,.9,.7,1.45)
-    }
+  40% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0, 0.9, 0.7, 1.45);
+  }
 }
 
-.leMagnify span { animation-name: leMagnify }
+.leMagnify span {
+  animation-name: leMagnify;
+}
+
 @keyframes leMagnify {
-    50% {
-        transform: scale(1.8);
-        letter-spacing: 26px
-    }
-}
-.stage {
-    border-bottom: 3px solid #444;
-    display: flex;
-    
-}
-.box {
-    align-self: flex-end;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    background-color: #5a5757;
-    height: 200px;
-    margin: 0 auto 0 auto;
-    transform-origin: bottom;
-    width: 200px;
-    
-}
-.bounce-1 {
-    animation-name: bounce-1;
-    animation-timing-function: linear;
-    font-size: 23px;
-    font-family: "Caveat", cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: white;
-    border-radius: 12px;
-
-}
-@keyframes bounce-1 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-100px); }
-    100% { transform: translateY(0); }
-}
-
-
-@media screen and (max-width:425px){
-    .hero-section{
-        flex-direction: column;
-        padding-top: 0;
-        
-    }
-    .stage{
-        padding-top: 10rem;
-        width: 80%;
-    }
-   .hero-section-box-1{
-    width: 100%;
-    }
-    
-.hero-section-box-1 p {
-    width: 100%;
-}
-.hero-section-box-1 h1{
-    font-size: 30px;
-}
-.menu{
-    font-size: 40px;
-}
-.light{
-    font-size: 40px;
-}
+  50% {
+    transform: scale(1.8);
+    letter-spacing: 26px;
   }
-  
-  @media screen and (min-width:426px) and (max-width:1440px){
-    
+}
+
+@media screen and (min-width: 769) and (max-width: 1200px) {
+  #Hero {
+    height: auto;
+    padding: 200px 0 25px 0;
   }
+}
+
+@media (min-width: 945px) and (max-width: 1077px) {
+  #Hero {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 40px 0 0 0;
+  }
+  .banner-hero {
+    padding: 20px 5px;
+  }
+  .div1 {
+    gap: 15px;
+  }
+  .div2 {
+    width: 30.3% !important;
+    margin-left: 0px !important;
+    min-height: auto;
+  }
+}

@@ -1,189 +1,114 @@
-import "./Home.css";
-import Word from "../../Word";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { IconContext } from "react-icons";
+import { GrTwitter } from "react-icons/gr";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { GoMail } from "react-icons/go";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { UseColorContext } from "../../Context/Context";
+import "./Home.css"; // Import external CSS
+import Hambourger from "./Hambourger";
+const Media__links = {
+  Twitter: "https://x.com/Amanver59327311",
+  Github: "https://github.com/amanv3093",
+  Linkedin: "https://www.linkedin.com/in/aman-verma-180a04243/",
+};
 
-function Home() {
-  let [isHovered, setIsHovered] = useState(true);
-  const [filled, setFilled] = useState(0);
-  let { setHandleColor } = UseColorContext();
-  let [isLight, setIsLight] = useState(true);
-  const [boxInnerVisible, setBoxInnerVisible] = useState(false);
+const Navbar = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 200 });
   }, []);
 
-  let handleToggle = () => {
-    setBoxInnerVisible((prevVisible) => !prevVisible);
-    let box2Inner = document.querySelector(".box-2-inner");
-    let menu = document.querySelector("#Menu");
-    if (isHovered) {
-      setIsHovered(false);
-      menu.style.transition = "0.8s ease-in";
-      // box2Inner.style.display='block'
-      // box2Inner.style.transition='0.8s ease-in'
-      // box2Inner.style.right='-35px'
-      setFilled(0);
-    } else {
-      setIsHovered(true);
-      menu.style.transition = "0.8s ease-in";
-      // box2Inner.style.display='none'
-      // box2Inner.style.transition='0.8s ease-in'
-      // box2Inner.style.right='-450px'
-    }
-  };
+  const [change, setChange] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  let handleLight = () => {
-    let menuBox = document.querySelector(".menu-box");
-    let HomeDetails = document.querySelector(".Home-details");
-    let anchor1 = document.querySelectorAll(".anchor1");
-    let box2Inner = document.querySelector(".box-2-inner");
-    if (isLight) {
-      setIsLight(false);
-      document.body.style.background = "black";
-      document.body.style.color = "#551a8b";
-      box2Inner.style.background = "black";
-      setHandleColor("#551a8b");
-      for (let i = 0; i < anchor1.length; i++) {
-        anchor1[i].style.color = "#551a8b";
-      }
-      // HomeDetails.style.color="#4cc2cd"
-      HomeDetails.style.background = "black";
+  const ChangeNavbarFixed = () => {
+    if (window.scrollY >= 80) {
+      setChange(true);
     } else {
-      setIsLight(true);
-      document.body.style.background = "#f8f8f8";
-      document.body.style.color = "black";
-      setHandleColor("black");
-      for (let i = 0; i < anchor1.length; i++) {
-        anchor1[i].style.color = "black";
-      }
-      // HomeDetails.style.color="black"
-      box2Inner.style.background = "#f8f8f8";
-      HomeDetails.style.background = "#f8f8f8";
+      setChange(false);
     }
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (filled < 100 && isHovered === false) {
-        setFilled((prevFilled) => prevFilled + 1);
-      } else if (isHovered === true) {
-        clearInterval(interval);
-      }
-    }, 10);
+    window.addEventListener("scroll", ChangeNavbarFixed);
+    return () => {
+      window.removeEventListener("scroll", ChangeNavbarFixed);
+    };
+  }, []);
 
-    return () => clearInterval(interval);
-  }, [filled, isHovered]);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav>
-      <div className="Home-details">
-        <div className="box-1 ">
-          <p>
-            <span>
-              <Word word="A" />
-              <Word word="M" />
-              <Word word="A" />
-              <Word word="N" />
-            </span>
-            {/* <span className='word-span'>
+    <header className={change ? "navbar colorChange" : "navbar"} id="Home">
+      <h1>
+        <a href="#Hero">Aman verma</a>
+      </h1>
 
-            <Word word="V" />
-            <Word word="E" />
-            <Word word="R" />
-            <Word word="M" />
-            <Word word="A" />
-
-          </span> */}
-          </p>
-        </div>
-
-        <div className="box-2">
-          <div className="menu-box">
-            <ul className="menu2">
-              <li>
-                <a className="anchor1" href="#about">
-                  <Word word="About" />
-                </a>
-              </li>
-              <li>
-                <a className="anchor1" href="#skill">
-                  <Word word="Skill" />
-                </a>
-              </li>
-              <li>
-                <a className="anchor1" href="#project">
-                  <Word word="Project" />
-                </a>
-              </li>
-              <li>
-                <a className="anchor1" href="#contact">
-                  <Word word="Contact" />
-                </a>
-              </li>
-              <li>
-                <a
-                  className="anchor1"
-                  href="https://drive.google.com/file/d/1CcDAhKSIJqPp_AVhsQowaAI0qOGBNvFY/view?usp=sharing"
-                  target="_blank"
-                >
-                  <Word word="Resume" />
-                </a>
-              </li>
-            </ul>
-            <span
-              onClick={handleLight}
-              className="material-symbols-outlined light"
+      <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+        {["Home", "About", "Work", "Contact"].map((item, index) => (
+          <li key={item}>
+            <a
+              href={item === "Home" ? "#Hero" : `#${item}`}
+              className={item === "Home" ? "active" : ""}
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration={`${1000 + index * 200}`}
             >
-              {isLight ? `clear_night` : `light_mode`}
-            </span>
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div className="media">
+        <IconContext.Provider value={{ className: "react-icons", size: 15 }}>
+          {[
+            {
+              link: Media__links.Twitter,
+              icon: <GrTwitter />,
+              name: "Twitter",
+            },
+            {
+              link: Media__links.Github,
+              icon: <AiFillGithub />,
+              name: "Github",
+            },
+            {
+              link: Media__links.Linkedin,
+              icon: <AiFillLinkedin />,
+              name: "Linkedin",
+            },
+          ].map((media, index) => (
             <span
-              onClick={handleToggle}
-              id="Menu"
-              className="material-symbols-outlined menu"
+              key={media.name}
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration={`${1000 + index * 400}`}
             >
-              {isHovered ? `menu` : `close`}
+              <a href={media.link} target="_blank" rel="noreferrer">
+                {media.icon} {media.name}
+              </a>
             </span>
-          </div>
-          <div className={`box-2-inner ${boxInnerVisible ? "visible" : ""}`}>
-            <ul>
-              <li>
-                <a onClick={handleToggle} className="anchor1" href="#about">
-                  <Word word="About" />
-                </a>
-              </li>
-              <li>
-                <a onClick={handleToggle} className="anchor1" href="#skill">
-                  <Word word="Skill" />
-                </a>
-              </li>
-              <li>
-                <a onClick={handleToggle} className="anchor1" href="#project">
-                  <Word word="Project" />
-                </a>
-              </li>
-              <li>
-                <a onClick={handleToggle} className="anchor1" href="#contact">
-                  <Word word="Contact" />
-                </a>
-              </li>
-              <li>
-                <a
-                  className="anchor1"
-                  href="https://drive.google.com/file/d/1CcDAhKSIJqPp_AVhsQowaAI0qOGBNvFY/view?usp=sharing"
-                  target="_blank"
-                >
-                  <Word word="Resume" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+          ))}
+        </IconContext.Provider>
+
+        <span
+          className="btn-mail"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="1600"
+        >
+          <a className="mail" href="mailto:amanv3093@gmail.com">
+            <GoMail />
+          </a>
+        </span>
       </div>
-    </nav>
-  );
-}
 
-export default Home;
+      <Hambourger toggleMenu={toggleMenu} />
+    </header>
+  );
+};
+
+export default Navbar;

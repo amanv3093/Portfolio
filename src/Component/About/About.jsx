@@ -1,73 +1,117 @@
-import './About.css';
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';
-import { UseColorContext } from '../../Context/Context';
+import React from "react";
+import { useEffect } from "react";
+import "./About.css"; // Import external CSS file
+import { IconContext } from "react-icons";
+import { HiCode } from "react-icons/hi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-
-
-function About() {
-  const compRef = useRef(null);
-
+const About = () => {
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { duration: 10, ease: "power3.out" } });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Start animation when the component is in view
-          tl.to("#textblock2 .para1", {
-            text: {
-              value: ` Hello! I'm Aman, a passionate Bachelor of Computer Application student based in India. I find joy in creating digital wonders that come to life on the internet. As a developer, I specialize in crafting exceptional websites and web applications that offer intuitive, pixel-perfect user interfaces.`,
-              scrambleText: { chars: "lowerCase", revealDelay: 0.1, tweenLength: false },
-            }
-          }).to("#textblock2 .para2", {
-            text: {
-              value: ` In other words, I'm dedicated to building digital experiences that not only function flawlessly but also delight users with their simplicity and elegance. Let's bring your ideas to life and make an impact in the online world together!`,
-              scrambleText: { chars: "lowerCase", revealDelay: 0.1, tweenLength: false },
-            }
-          });
-          observer.unobserve(entry.target); // Stop observing once animation is triggered
-        }
-      });
+    AOS.init({
+      duration: 300,
     });
-
-    if (compRef.current) {
-      observer.observe(compRef.current); // Start observing the component
-    }
-
-    // Cleanup function
-    return () => {
-      if (compRef.current) {
-        observer.unobserve(compRef.current); // Stop observing when component unmounts
-      }
-    };
-
   }, []);
 
-  let {handleColor}=UseColorContext()
   return (
-    <div className='About' id="about" ref={compRef}   >
-      <div className='About-heading' >
-        <p className='cssanimation leMagnify sequence'>Get To Know More</p>
-        <h2 data-aos="zoom-out" data-aos-duration="1000">About Me</h2>
-        <div className='about-icon-box' data-aos="zoom-out" data-aos-duration="1000">
-          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://github.com/amanv3093'><i className="icon1 fa-brands fa-github"></i></a>
-          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://www.linkedin.com/in/aman-verma-180a04243/'><i className="icon1 fa-brands fa-linkedin"></i></a>
-          <a style={{color:handleColor==="black"?"black":'#551a8b'}}  href='mailto:amanv3093@gmail.com'><i className="icon1 fa-regular fa-envelope"></i></a>
-          <a style={{color:handleColor==="black"?"black":'#551a8b'}} target='_blank' href='https://twitter.com/Amanver59327311'><i className="icon1 fa-brands fa-x-twitter"></i></a>
+    <div className="introduction" id="About">
+      <div className="service-block">
+        <div className="front-end" data-aos="fade-up">
+          <div className="title">
+            <span className="Active">Front-End Developer</span>
+
+            <IconContext.Provider
+              value={{
+                className: "react-icons",
+                size: "1.5rem",
+                color: "#6EF3A5",
+              }}
+            >
+              <HiCode />
+            </IconContext.Provider>
+          </div>
+
+          <p>
+            Hello! I'm Aman, a passionate Bachelor of Computer Application
+            student based in India. I find joy in creating digital wonders that
+            come to life on the internet. As a developer, I specialize in
+            crafting exceptional websites and web applications that offer
+            intuitive, pixel-perfect user interfaces.
+          </p>
+
+          <a href="#Works">PROJECTS</a>
         </div>
       </div>
-      <div className='About-box2' id='textblock2' >
-        <p className='para1' data-aos="zoom-out">
-          Hello! I'm Aman, a passionate Bachelor of Computer Application student based in India. I find joy in creating digital wonders that come to life on the internet. As a developer, I specialize in crafting exceptional websites and web applications that offer intuitive, pixel-perfect user interfaces.
+
+      {/* AboutBlock */}
+      <div className="about-block">
+        <span data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          Introduce
+          <img alt="" />
+        </span>
+
+        <h1 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          Hi, I’m Aman
+        </h1>
+
+        <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          Front-End Developer
+          <br />
+          I'm dedicated to building digital experiences that not only function
+          flawlessly but also delight users with their simplicity and elegance.
+          Let's bring your ideas to life and make an impact in the online world
+          together!
         </p>
-        <p className='para2' data-aos="zoom-out">
-          In other words, I'm dedicated to building digital experiences that not only function flawlessly but also delight users with their simplicity and elegance. Let's bring your ideas to life and make an impact in the online world together!
+
+        <p data-aos="fade-up">
+          I talk about my journey on{" "}
+          <a
+            href="https://x.com/Amanver59327311"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
+          , commit code to{" "}
+          <a
+            href="https://github.com/amanv3093"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+          , and network on{" "}
+          <a
+            href="https://www.linkedin.com/in/aman-verma-180a04243/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Linkedin.
+          </a>
         </p>
+
+        <p data-aos="fade-up">Skills :</p>
+
+        <div className="techo-section">
+          <ul data-aos="fade-up">
+            <li>Html</li>
+            <li>JavaScript(ES6+)</li>
+            <li>React.js</li>
+            <li>Git/Github</li>
+            <li>Tailwind CSS</li>
+          </ul>
+
+          <ul className="Active" data-aos="fade-up">
+            <li>Css</li>
+            <li>Redux</li>
+            <li>Firebase</li>
+            <li>Material UI</li>
+            <li>Java</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;
